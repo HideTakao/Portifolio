@@ -9,7 +9,8 @@ lista_corte = corte['ENDEREÇO'].unique().tolist()
 assinantes = pd.read_excel('Relatorio assinantes.xlsx')
 assinantes = assinantes.fillna('')
 assinantes['NUM_ENDERECO'] = assinantes['NUM_ENDERECO'].astype(str).apply(lambda x: x.split('.')[0])
-assinantes['ENDEREÇO'] = assinantes['NOM_LOGR_COMPLETO'] + ' ' + assinantes['NUM_ENDERECO'] + ' ' + assinantes['COD_TIPO_COMPL1'] + ' ' + assinantes['TXT_TIPO_COMPL1'].astype(str) + ' ' + assinantes['COD_TIPO_COMPL2'] + ' ' + assinantes['TXT_TIPO_COMPL2'].astype(str) + ' ' + assinantes['COD_TIPO_COMPL'] + ' ' + assinantes['TXT_COMPL'].astype(str)
+assinantes['ENDEREÇO'] = assinantes['NOM_LOGR_COMPLETO'] + ' ' + assinantes['NUM_ENDERECO'] + ' ' + assinantes['COD_TIPO_COMPL1'] + ' ' + assinantes['TXT_TIPO_COMPL1'].astype(str) + ' ' + 
+assinantes['COD_TIPO_COMPL2'] + ' ' + assinantes['TXT_TIPO_COMPL2'].astype(str) + ' ' + assinantes['COD_TIPO_COMPL'] + ' ' + assinantes['TXT_COMPL'].astype(str)
 lista_assinantes = assinantes['ENDEREÇO'].unique().tolist()
 instalados = {}
 desconectados = []
